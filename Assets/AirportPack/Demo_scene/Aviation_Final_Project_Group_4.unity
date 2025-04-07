@@ -2043,6 +2043,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5420066312473470675, guid: 3280bc5917579164ca35221c4bab51db, type: 3}
   m_PrefabInstance: {fileID: 103846491}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &106747639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2343049710208467051, guid: 161c4cff5e47c0945aa7faaf3ee23e9e, type: 3}
+  m_PrefabInstance: {fileID: 1600069603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &106747641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106747639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3ff249d7df5493da62c72c7f6a79dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 5
+  maxSpeed: 50
+  liftOffSpeed: 20
+  liftForce: 5
+  cameraTransform: {fileID: 1064398459}
 --- !u!1001 &109732639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12835,7 +12857,6 @@ GameObject:
   - component: {fileID: 787715510}
   - component: {fileID: 787715513}
   - component: {fileID: 787715515}
-  - component: {fileID: 787715514}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -12872,7 +12893,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1064398462}
   m_OriginBaseGameObject: {fileID: 787715509}
   m_CameraFloorOffsetObject: {fileID: 1385373744}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 0
 --- !u!4 &787715512
 Transform:
@@ -12903,49 +12924,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredOriginPosition: {x: 5033.1, y: 7, z: 1081.2}
---- !u!114 &787715514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787715509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 787715515}
-  m_MoveSpeed: 1
-  m_EnableStrafe: 1
-  m_EnableFly: 0
-  m_UseGravity: 1
-  m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 0}
-  m_LeftHandMoveAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 7964777c-ed1a-415d-9b1c-fd4591b36278
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_RightHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 15bc70aa-1193-4b65-b14f-0ab2e5db81f6
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &787715515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26290,7 +26268,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2343049710208467051, guid: 161c4cff5e47c0945aa7faaf3ee23e9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 106747641}
   m_SourcePrefab: {fileID: 100100000, guid: 161c4cff5e47c0945aa7faaf3ee23e9e, type: 3}
 --- !u!1001 &1602576596
 PrefabInstance:
